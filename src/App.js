@@ -2,15 +2,16 @@ import React from 'react';
 import './App.css';
 import AppMain from './components/AppMain';
 import Menu from './components/Menu'
+import CartContextProvider from './components/CartContext';
+
 
 function App() {
   return (
-		<div
-			
-    >
-      <Menu/>
-      <AppMain />
-      
+		<div>
+			<CartContextProvider>
+				<Menu />
+				<AppMain />
+			</CartContextProvider>
 		</div>
 	);
 }

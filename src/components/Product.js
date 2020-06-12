@@ -1,7 +1,10 @@
-import React from 'react'
+import React,{useContext} from 'react'
 import { Grid } from '@material-ui/core';
+import {CartContext} from '../components/CartContext'
 
-export default function Product({item}) {
+
+export default function Product({ item }) {
+    const {addItem} = useContext(CartContext)
     return (
 			<Grid
 				item
@@ -16,7 +19,9 @@ export default function Product({item}) {
 				<img src={item.image} style={{ width: '40%' }} alt="logo" />
 				<p>{item.title}</p>
             <p>{item.price}</p>
-            <button>Add to Basket</button>
+            <button onClick={() => {
+                addItem(item)
+            }}>Add to Basket</button>
 			</Grid>
 		);
 }

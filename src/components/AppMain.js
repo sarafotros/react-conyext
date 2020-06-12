@@ -46,7 +46,7 @@ export default function AppMain() {
 			style={{ width: '100%', height: 'auto', backgroundColor: '#e1e1e1' }}
         >
             {data.map((item) => 
-                <Product item={item} />
+                <Product item={item} key={item.id}/>
                 
             )}
         </Grid>
