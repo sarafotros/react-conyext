@@ -3,6 +3,7 @@ import './App.css';
 import AppMain from './components/AppMain';
 import Menu from './components/Menu'
 import CartContextProvider from './components/CartContext';
+import CardContent from './components/CardContent'
 
 
 function App() {
@@ -10,7 +11,8 @@ function App() {
 		<div>
 			<CartContextProvider>
 				<Menu />
-				<AppMain />
+        <AppMain />
+        <CardContent/>
 			</CartContextProvider>
 		</div>
 	);
