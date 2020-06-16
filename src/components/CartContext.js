@@ -15,15 +15,7 @@ export default function CartContextProvider({ children }) {
         setData([...data, item])
     }
 
-    const isExist = (id) => {
-        let count = 0
-        data.map((item) => {
-            if (item.id === id) {
-                count= count+1
-            }
-        })
-        return count===0 ? false:true
-    }
+    const isExist = (id) =>  data.some(item => item.id == id)
 
     const removeItem = (id) => {
         setData(data => 
